@@ -1,0 +1,33 @@
+<div class="container ">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5  grad3">
+        <div class="card-body">
+          <h2 class="card-title text-center diffuse-light">Sign Up</h2>
+          <hr class="my-4">
+
+          <form [formGroup]="registerForm" (ngSubmit)="register()">
+
+
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="User Name" formControlName="username">
+            </div>
+
+            <div class="form-group">
+              <input type="password" class="form-control" formControlName="password" placeholder="Password">
+            </div>
+
+            <div class="form-group">
+              <input type="password" class="form-control" formControlName="confirmPassword" placeholder="Confirm Password">
+            </div>
+
+            <div class="form-group text-center">
+              <button class="btn btn-success mr-2" type="submit">Register</button>
+              <button class="btn btn-default" type="button" (click)="cancel()">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

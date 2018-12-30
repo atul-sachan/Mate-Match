@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/38bbd697-b79a-49fb-9be5-7818b3dbb0f0/resourceGroups/developement/providers/Microsoft.Web/sites/mate-match",
+    "appService.deploySubpath": ""
+}

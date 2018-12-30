@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5 grad3">
+          <div class="card-body">
+            <h2 class="card-title text-center diffuse-light">Mate Match</h2>
+            <hr class="my-4">
+            <form class="form-signin" #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off">
+              <div class="form-label-group">
+                <input type="text" id="inputUsername" class="form-control" autocomplete="off" name="username" placeholder="User Name" [(ngModel)]="model.username" required autofocus>
+                <label for="inputUsername" class="diffuse-light">User Name</label>
+              </div>
+
+              <div class="form-label-group">
+                <input type="password" id="inputPassword" autocomplete="off"  class="form-control" name="password" placeholder="Password" [(ngModel)]="model.password" required>
+                <label for="inputPassword" class="diffuse-light">Password</label>
+              </div>
+
+              <div class="custom-control custom-checkbox mb-3">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Remember password</label>
+              </div>
+              <button class="btn btn-lg btn-primary  btn-block text-uppercase" [disabled]="!loginForm.valid" type="submit">Sign in</button>
+              <hr class="my-4">
+              <button class="btn btn-lg btn-google btn-block text-uppercase" type="button"><i class="fa fa-google mr-2"></i> Sign in with Google</button>
+              <button class="btn btn-lg btn-facebook btn-block text-uppercase" type="button"><i class="fa fa-facebook mr-2"></i> Sign in with Facebook</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
