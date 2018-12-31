@@ -5,11 +5,13 @@ using System.Threading.Tasks;
 using AutoMapper;
 using Mate_Match_API.Data.Interfaces;
 using Mate_Match_API.DTOs;
+using Mate_Match_API.Helpers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Mate_Match_API.Controllers
 {
+    [ServiceFilter(typeof(LogUserActivity))]
     [Authorize]
     [Route("api/[controller]")]
     [ApiController]
@@ -31,7 +33,7 @@ namespace Mate_Match_API.Controllers
             return Ok(usersToReturn);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name="GetUser")]
         public async Task<IActionResult> GetUser(int id)
         {
             var user = await _repo.GetUser(id);

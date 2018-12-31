@@ -25,6 +25,7 @@ namespace Mate_Match_API.Helpers
             CreateMap<UserForUpdateDto, User>();
             CreateMap<Photo, PhotosForReturnDto>();
             CreateMap<PhotoForCreationDto, Photo>();
+            CreateMap<UserForRegisterDto, User>();
         }
     }
 }
